@@ -1,4 +1,5 @@
 {% import "button/src/button.njk" as Button %}
+{% set icon %}{% include "./icons/IconoirChatBubbleEmpty.svg" %}{% endset %}
 
 <!doctype html>
 <html lang="en">
@@ -10,6 +11,11 @@
   </head>
   <body>
     {{ content | safe }}
-    {{ Button.btn('Hello Rioters 🤘 !') }}
+    {{ Button.btn('Hello Rioters 🤘 !', classes='hi_button', icon=icon) }}
   </body>
+  <script>
+    document.querySelector('.hi_button').addEventListener('click', () => {
+      alert("You've clicked the Welcome button");
+    })
+  </script>
 </html>

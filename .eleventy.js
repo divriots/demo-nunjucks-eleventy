@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
 
   let nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader([
+      "_includes",
       "node_modules/@backlight-dev/divriots.starter-nunjucks/",
     ])
   );
