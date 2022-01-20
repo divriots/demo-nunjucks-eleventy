@@ -47,10 +47,17 @@ new Nunjucks.FileSystemLoader([
 
 This way, you can `import`/`include` any component from the Design System as any regular Nunjucks files:
 
-```njk {% raw %}
+<!--
+  We use raw Nunjucks instruction here, so the snippet is rendered by
+  the 11ty app; but we also wrap it in HTML comments, so Github won't
+  render it in the README preview.
+-->
+<!-- {% raw %} -->
+```njk
 {% import "button/src/button.njk" as Button %}
 {{ Button.btn('Hello Rioters 🤘 !') }}
-{% endraw %} ```
+```
+<!-- {% endraw %} -->
 
 ## Resources
 
